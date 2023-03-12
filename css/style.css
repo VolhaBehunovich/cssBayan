@@ -1,3 +1,108 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(211, 211, 211);
+  color: rgb(93, 93, 93);
+  font-size: 16px;
+}
+
+.container {
+  width: 80%;
+  margin-left: 10%;
+}
+
+.container>div {
+  color: blue;
+  position: relative;
+}
+
+h1 {
+  text-align: center;
+  font-size: 32px;
+}
+
+p {
+  width: 90%;
+  margin: 20px 20px 0 0;
+}
+
+span {
+  position: absolute;
+  right: 0;
+  top: -22px;
+  padding: 17px 0;
+  display: none;
+  transition: 1s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+}
+
+img {
+  width: 250px;
+  height: 250px;
+  margin: auto;
+  display: none;
+}
+
+@media (min-width:600px) {
+  img {
+    width: 300px;
+    height: auto;
+    margin: auto;
+  }
+
+  h1 {
+    font-size: 42px;
+  }
+
+  body {
+    font-size: 20px;
+  }
+
+  span {
+    padding: 21px 0;
+  }
+}
+
+.container:hover {
+  cursor: pointer;
+}
+
+.container:hover span {
+  display: block;
+}
+
+.container:hover div {
+  color: rgb(93, 93, 93);
+}
+
+.container>div:focus>img {
+  display: block;
+}
+
+.container>div:focus>span {
+  transform: rotate(220deg);
+  -webkit-transform: rotate(220deg);
+  -moz-transform: rotate(220deg);
+  -ms-transform: rotate(220deg);
+  -o-transform: rotate(220deg);
+}
+
+.container>div:focus {
+  border: none;
+  outline: none;
+  color: rgb(93, 93, 93);
+}
+
+.container>div:hover {
+  cursor: pointer;
+  color: rgb(93, 93, 93);
+}
+
+.container>div:hover>img {
+  display: block;
 }
