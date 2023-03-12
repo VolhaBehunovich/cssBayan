@@ -1,0 +1,160 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --gray-font: #545454;
+}
+
+body {
+  background-color: #d3d3d3;
+  font-size: 16px;
+  color: var(--gray-font);
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+@media (min-width:800px) {
+  body {
+    font-size: 24px;
+  }
+
+  .container {
+    width: 80%;
+  }
+}
+
+@media (min-width:1800px) {
+  body {
+    font-size: 32px;
+  }
+
+  .container {
+    width: 70%;
+  }
+}
+
+
+.container>div {
+  color: blue;
+  position: relative;
+}
+
+h1 {
+  text-align: left;
+  font-size: 32px;
+}
+
+@media (min-width:800px) {
+  h1 {
+    font-size: 48px;
+  }
+}
+
+@media (min-width:1800px) {
+  h1 {
+    font-size: 64px;
+  }
+}
+
+hr {
+  margin: 10px 0 0;
+  border: 1px solid #cacaca;
+}
+
+p {
+  margin: 20px 0 10px;
+}
+
+span {
+  position: absolute;
+  right: 0;
+  top: -22px;
+  padding: 17px 0;
+  display: none;
+  transition: 1s;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+}
+
+@media (min-width:800px) {
+  span {
+    padding: 21px 0;
+  }
+}
+
+img {
+  width: 250px;
+  margin: auto;
+  height: 0;
+  display: block;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+
+.container:hover {
+  cursor: pointer;
+}
+
+.container:hover span {
+  display: block;
+}
+
+.container:hover div {
+  color: var(--gray-font);
+}
+
+.container>div:hover {
+  cursor: pointer;
+  color: var(--gray-font);
+}
+
+.container>div:hover>img {
+  height: 250px;
+}
+
+.container>div:hover>span {
+  transform: rotate(220deg);
+  -webkit-transform: rotate(220deg);
+  -moz-transform: rotate(220deg);
+  -ms-transform: rotate(220deg);
+  -o-transform: rotate(220deg);
+}
+
+.container>div:active>p {
+  color: blue;
+}
+
+.container>div:active>span {
+  color: blue;
+}
+
+.container>div:active>img {
+  opacity: 0.7;
+}
+
+.container>div:focus {
+  border: none;
+  outline: none;
+  color: var(--gray-font);
+}
+
+.container>div:focus>img {
+  height: 250px;
+}
+
+.container>div:focus>span {
+  transform: rotate(220deg);
+  -webkit-transform: rotate(220deg);
+  -moz-transform: rotate(220deg);
+  -ms-transform: rotate(220deg);
+  -o-transform: rotate(220deg);
+}
