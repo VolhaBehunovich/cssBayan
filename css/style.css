@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: rgb(211, 211, 211);
+  background-color: #d3d3d3;
   font-size: 16px;
   color: var(--gray-font);
 }
@@ -19,7 +19,7 @@ body {
 
 @media (min-width:800px) {
   body {
-    font-size: 20px;
+    font-size: 24px;
   }
 
   .container {
@@ -44,13 +44,13 @@ body {
 }
 
 h1 {
-  text-align: center;
+  text-align: left;
   font-size: 32px;
 }
 
 @media (min-width:800px) {
   h1 {
-    font-size: 42px;
+    font-size: 48px;
   }
 }
 
@@ -60,9 +60,13 @@ h1 {
   }
 }
 
+hr {
+  margin: 10px 0 0;
+  border: 1px solid #cacaca;
+}
+
 p {
-  width: 90%;
-  margin: 20px 20px 0 0;
+  margin: 20px 0 10px;
 }
 
 span {
@@ -86,22 +90,14 @@ span {
 
 img {
   width: 250px;
-  height: 250px;
   margin: auto;
-  display: none;
-}
-
-@media (min-width:800px) {
-  img {
-    width: 300px;
-    height: auto;
-  }
-}
-
-@media (min-width:1800px) {
-  img {
-    width: 400px;
-  }
+  height: 0;
+  display: block;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
 }
 
 .container:hover {
@@ -116,15 +112,13 @@ img {
   color: var(--gray-font);
 }
 
-
-
 .container>div:hover {
   cursor: pointer;
   color: var(--gray-font);
 }
 
 .container>div:hover>img {
-  display: block;
+  height: 250px;
 }
 
 .container>div:hover>span {
@@ -135,6 +129,17 @@ img {
   -o-transform: rotate(220deg);
 }
 
+.container>div:active>p {
+  color: blue;
+}
+
+.container>div:active>span {
+  color: blue;
+}
+
+.container>div:active>img {
+  opacity: 0.7;
+}
 
 .container>div:focus {
   border: none;
@@ -143,7 +148,7 @@ img {
 }
 
 .container>div:focus>img {
-  display: block;
+  height: 250px;
 }
 
 .container>div:focus>span {
