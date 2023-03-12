@@ -2,16 +2,41 @@
   box-sizing: border-box;
 }
 
+:root {
+  --gray-font: #545454;
+}
+
 body {
   background-color: rgb(211, 211, 211);
-  color: rgb(93, 93, 93);
   font-size: 16px;
+  color: var(--gray-font);
 }
 
 .container {
-  width: 80%;
-  margin-left: 10%;
+  width: 90%;
+  margin: auto;
 }
+
+@media (min-width:800px) {
+  body {
+    font-size: 20px;
+  }
+
+  .container {
+    width: 80%;
+  }
+}
+
+@media (min-width:1800px) {
+  body {
+    font-size: 32px;
+  }
+
+  .container {
+    width: 70%;
+  }
+}
+
 
 .container>div {
   color: blue;
@@ -21,6 +46,18 @@ body {
 h1 {
   text-align: center;
   font-size: 32px;
+}
+
+@media (min-width:800px) {
+  h1 {
+    font-size: 42px;
+  }
+}
+
+@media (min-width:1800px) {
+  h1 {
+    font-size: 64px;
+  }
 }
 
 p {
@@ -41,6 +78,12 @@ span {
   -o-transition: 1s;
 }
 
+@media (min-width:800px) {
+  span {
+    padding: 21px 0;
+  }
+}
+
 img {
   width: 250px;
   height: 250px;
@@ -48,23 +91,16 @@ img {
   display: none;
 }
 
-@media (min-width:600px) {
+@media (min-width:800px) {
   img {
     width: 300px;
     height: auto;
-    margin: auto;
   }
+}
 
-  h1 {
-    font-size: 42px;
-  }
-
-  body {
-    font-size: 20px;
-  }
-
-  span {
-    padding: 21px 0;
+@media (min-width:1800px) {
+  img {
+    width: 400px;
   }
 }
 
@@ -77,7 +113,33 @@ img {
 }
 
 .container:hover div {
-  color: rgb(93, 93, 93);
+  color: var(--gray-font);
+}
+
+
+
+.container>div:hover {
+  cursor: pointer;
+  color: var(--gray-font);
+}
+
+.container>div:hover>img {
+  display: block;
+}
+
+.container>div:hover>span {
+  transform: rotate(220deg);
+  -webkit-transform: rotate(220deg);
+  -moz-transform: rotate(220deg);
+  -ms-transform: rotate(220deg);
+  -o-transform: rotate(220deg);
+}
+
+
+.container>div:focus {
+  border: none;
+  outline: none;
+  color: var(--gray-font);
 }
 
 .container>div:focus>img {
@@ -90,19 +152,4 @@ img {
   -moz-transform: rotate(220deg);
   -ms-transform: rotate(220deg);
   -o-transform: rotate(220deg);
-}
-
-.container>div:focus {
-  border: none;
-  outline: none;
-  color: rgb(93, 93, 93);
-}
-
-.container>div:hover {
-  cursor: pointer;
-  color: rgb(93, 93, 93);
-}
-
-.container>div:hover>img {
-  display: block;
 }
